@@ -5,7 +5,7 @@
 
 ## Developers
 
-[Susan Potter](http://susanpotter.net "Agile Ruby, Merb, Rails, Javascript Developer")
+[Susan Potter, CTO & Software Engineer](http://susanpotter.net "Agile Ruby, Merb, Rails, Javascript Developer")
 
 ## Contributors
 
