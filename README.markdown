@@ -2,11 +2,11 @@
 
 **License:** MIT License
 
-**Objective:** Extensions (plugins, snippets, etc.) for Ruby, Rails/Merb, Python, Django developers.
+**Objective:** Extensions (plugins, snippets, etc.) for Ruby, Rails/Merb, Python, Django, Erlang developers.
 
 ## Developers
 
-[Susan Potter, CTO & Software Engineer](http://susanpotter.net "Agile Ruby, Merb, Rails, Javascript Developer") @ [Finsignia](http://finsignia.com)
+[Susan Potter, CTO & Software Engineer](http://susanpotter.net "Agile Ruby, Merb, Rails, Javascript Developer") at [Finsignia](http://finsignia.com)
 
 ## Contributors
 
