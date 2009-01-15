@@ -1,11 +1,12 @@
 # GEdit Extensions
 
 **License:** MIT License
+
 **Objective:** Extensions (plugins, snippets, etc.) for Ruby, Rails/Merb, Python, Django developers.
 
 ## Developers
 
-[Susan Potter, CTO & Software Engineer](http://susanpotter.net "Agile Ruby, Merb, Rails, Javascript Developer")
+[Susan Potter, CTO & Software Engineer](http://susanpotter.net "Agile Ruby, Merb, Rails, Javascript Developer") @ [Finsignia](http://finsignia.com)
 
 ## Contributors
 
