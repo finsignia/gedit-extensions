@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="ruby">
+  <snippet>
+    <text><![CDATA[has_and_belongs_to_many :${1:entity}]]></text>
+    <tag>habtm</tag>
+    <description>has and belongs to many</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[it "should ${1:condition}"]]></text>
+    <tag>it</tag>
+    <description>it</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[#!/usr/bin/env ruby
+]]></text>
+    <tag>shebang</tag>
+    <description>shebang</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[require(File.join(File.dirname(__FILE__), "${1:file_name}")]]></text>
+    <tag>absrequire</tag>
+    <description>absrequire</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[has_and_belongs_to_many :${1:name}]]></text>
+    <tag>habtm</tag>
+    <description>habtm</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[has_and_belongs_to_many :${1:name}, :through => :${2:association}]]></text>
+    <tag>habtmthru</tag>
+    <description>habtm thru</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[:unique => true]]></text>
+    <tag>unique</tag>
+    <description>unique</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[belongs_to :${1:name}]]></text>
+    <tag>belongsto</tag>
+    <description>belongs_to</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[has_one :${1:name}]]></text>
+    <tag>hasone</tag>
+    <description>hasone</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[create_table :${1:table_name} do |t|
+	${0}
+end
+]]></text>
+    <tag>createtable</tag>
+    <description>create_table</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[column(:${1:name}, :${2:type}${0})]]></text>
+    <tag>column</tag>
+    <description>column</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[:limit => ${1:limit}]]></text>
+    <tag>limit</tag>
+    <description>limit</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[add_index(:${1:table}, :${2:column}${0})]]></text>
+    <tag>addindex</tag>
+    <description>addindex</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[change_column(:${1:table}, :${2:column}, ${0})]]></text>
+    <tag>changecolumn</tag>
+    <description>changecolumn</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[drop_table(:${1:name})]]></text>
+    <tag>droptable</tag>
+    <description>droptable</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[remove_column(:${1:name}, :${2:column})]]></text>
+    <tag>removecolumn</tag>
+    <description>removecolumn</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[raise ActiveRecord::IrreversibleMigration, "${1:reason}"
+]]></text>
+    <tag>irreversible</tag>
+    <description>irreversible</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[class ${1:ResourceName}Resource < ActiveResource::Base
+	self.site = "http://${2:host}:${3:port}/"
+	self.element_name = "${4:name}"
+	self.prefix = "${5:prefix}"
+	self.user = "${6:username}"
+	self.password = "${7:password}"
+	self.timeout = ${8:timeout}
+end]]></text>
+    <tag>resource</tag>
+    <description>resource</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[describe ${1:module_or_class} do
+  before(:each) do
+    ${2:before}
+  end
+
+	${0}
+
+	after(:each) do
+		${3:after}
+	end
+end
+]]></text>
+    <tag>describe</tag>
+    <description>describe</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[pending("${1:message}") do
+	${0}
+end
+]]></text>
+    <tag>pending</tag>
+    <description>pending</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[it "should have an error on ${1:attribute}" do
+  @${2:model}.should have(${3:count}).errors_on(:${1:attribute})
+end]]></text>
+    <tag>specmodelerror</tag>
+    <description>specmodelerror</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[it "should have ${1:count} records" do
+  @${2:model}.should have(${1:count}).record${0}
+end]]></text>
+    <tag>specmodelrecords</tag>
+    <description>specmodelrecords</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[describe ${1:ControllerName}Controller do
+  integrate_views
+  
+  ${0}
+end]]></text>
+    <tag>describecontroller</tag>
+    <description>describecontroller</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[@id = 6543
+@${1:instance_name} = mock_model(${2:ModelClass})
+${2:ModelClass}.should_receive(:find).with(@id).and_return(@${1:instance_name})
+]]></text>
+    <tag>isolatemodel</tag>
+    <description>isolatemodel</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[it "should render '${1:template_path}' on ${2:http_method} '${3:request_path}'" do
+	${2:http_method}('${3:request_path}')
+	response.should(render_template("${1:template_path}"))
+end]]></text>
+    <tag>spectemplaterendered</tag>
+    <description>spectemplaterendered</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[it "should return text '${1:expected_text}' in response to ${2:http_method} on '${3:request_path}'" do
+	${2:http_method}('${3:request_path}')
+	response.should have_text("${1:expected_text}")
+end
+]]></text>
+    <tag>specresponsetext</tag>
+    <description>specresponsetext</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[it "should redirect to action '${1:action}' on ${2:http_method} '${3:request_path}'" do
+	${2:http_method}('${3:request_path}')
+	response.should redirect_to(:action => '${1:action}')
+end
+]]></text>
+    <tag>specresponseredirect</tag>
+    <description>specresponseredirect</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[it "should map #${1:action} to '${2:path}'" do
+	route_for(:controller => "${3:controller}", :action => "${1:action}").should == "${2:path}"
+end]]></text>
+    <tag>specroutefor</tag>
+    <description>specroutefor</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[it "should generate params for #${1:action}" do
+	params_from(:${2:http_method}, "${3:path}").should == {:controller => "${4:controller}", :action => "${1:action}", :id => "${5:id}"}
+end
+]]></text>
+    <tag>specparamsfrom</tag>
+    <description>specparamsfrom</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[response.should have_tag('${1:tag}.${2:class}#${3:dom_id}')
+]]></text>
+    <tag>spectagexists</tag>
+    <description>spectagexists</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[response.should have_tag('${1:parent_tag}') do
+  with_tag('${2:child_tag}', '${3:content}')
+  ${0}
+end]]></text>
+    <tag>specnestedtagexists</tag>
+    <description>specnestedtagexists</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[with_tag('${1:tag}', '${2:content}')]]></text>
+    <tag>specchildtagexists</tag>
+    <description>specchildtagexists</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[response[:${1:block_name}].should have_tag('${2:tag}')]]></text>
+    <tag>specblocktagexists</tag>
+    <description>specblocktagexists</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[template.should_receive(:${1:helper_method}).and_return(mock(${2:class}))]]></text>
+    <tag>mockviewhelper</tag>
+    <description>mockviewhelper</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[response.should be_success]]></text>
+    <tag>specsuccess</tag>
+    <description>specsuccess</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[response.should be_redirect]]></text>
+    <tag>specredirect</tag>
+    <description>specredirect</description>
+  </snippet>
+</snippets>

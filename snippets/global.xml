@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets>
+  <snippet>
+    <text><![CDATA[Feature: ${1:feature_title}
+	In order to ${2:benefit}
+	As a ${3:actor}
+	I need ${4:description}
+
+	Scenario: ${5:scenario_title}
+		Given ${6:assumption}
+		And ${7:extra_condition}
+		When I ${8:action}
+		Then I should ${9:result}
+]]></text>
+    <tag>feature</tag>
+    <description>feature</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[Scenario: ${1:scenario_title}
+	Given ${2:assumption}
+	And ${3:extra_condition}
+	When I ${4:action}
+	Then I should ${5:result}
+]]></text>
+    <tag>scenario</tag>
+    <description>scenario</description>
+  </snippet>
+</snippets>
