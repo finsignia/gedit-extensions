@@ -1,0 +1,508 @@
+<html>
+  <head>
+    <title>gedit-extensions Documentation</title>
+    <style media='screen' type='text/css'>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Helvetica, "Lucida Grande", Calibri, Arial, sans-serif; }
+      
+      #header {
+        width: 88%;
+        background-color: #070707;
+        border: 1px solid #060606;
+        padding: 1% 3%;
+        margin: 3% 3%;
+        margin-top: 0;
+        float: left; }
+      
+      #header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+      
+      #header li {
+        display: inline; }
+      
+      #header li a {
+        display: block;
+        float: left;
+        padding: 5px;
+        margin: 0 10 10 0;
+        text-decoration: none;
+        color: #CB7832;
+        background-color: black; }
+      
+      #header li a:hover {
+        color: #CB7832;
+        background-color: white; }
+      
+      #footer {
+        border-top: 3px solid #060606;
+        padding: 3% 3%;
+        margin: 3% 3%;
+        font-size: 83%; }
+      
+      #footer a {
+        color: #6C9CBD;
+        text-decoration: none; }
+      
+      #footer a:hover {
+        color: white;
+        text-decoration: underline; }
+      
+      pre {
+        height: auto;
+        font-family: Consolas,Monaco,Inconsolata,'Courier New',Courier,monospace;
+        font-size: 90%;
+        background-color: #070707;
+        border: 1px solid #060606;
+        padding: 1% 3%;
+        margin: 3% 3%;
+        overflow-x: auto; }
+      
+      
+      .code .an {
+        color: #E7BE69; }
+      
+      .code .c {
+        color: #BC9358;
+        font-style: italic; }
+      
+      .code .ch {
+        color: #509E4F; }
+      
+      .code .cl {
+        color: #FFF; }
+      
+      .code .co {
+        color: #FFF; }
+      
+      .code .fl {
+        color: #A4C260; }
+      
+      .code .fu {
+        color: #FFC56D; }
+      
+      .code .gv {
+        color: #D0CFFE; }
+      
+      .code .i {
+        color: #A4C260; }
+      
+      .code .il {
+        background: #151515; }
+      
+      .code .iv {
+        color: #D0CFFE; }
+      
+      .code .pp {
+        color: #E7BE69; }
+      
+      .code .r {
+        color: #CB7832; }
+      
+      .code .rx {
+        color: #A4C260; }
+      
+      .code .s {
+        color: #A4C260; }
+      
+      .code .sy {
+        color: #6C9CBD; }
+      
+      .code .ta {
+        color: #E7BE69; }
+      
+      .code .pc {
+        color: #6C9CBD; }
+    </style>
+    <style media='print' type='text/css'>
+      body {
+        background-color: white;
+        color: black;
+        font-family: Helvetica, "Lucida Grande", Calibri, Arial, sans-serif;
+        font-size: 90%; }
+      
+      #header {
+        background-color: #efefef; }
+      
+      #header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+      
+      
+      #header li a {
+        font-weight: bold;
+        display: block;
+        padding: 5px;
+        margin: 0 10 10 0;
+        text-decoration: none;
+        color: black; }
+      
+      #header li a:hover {
+        color: #CB7832;
+        background-color: white; }
+      
+      #footer {
+        border-top: 3px solid #060606;
+        padding: 3% 3%;
+        margin: 3% 3%;
+        font-size: 83%; }
+      
+      #footer a {
+        color: #6C9CBD;
+        text-decoration: none; }
+      
+      #footer a:hover {
+        color: white;
+        text-decoration: underline; }
+      
+      pre {
+        height: auto;
+        font-family: Consolas,Monaco,Inconsolata,'Courier New',Courier,monospace;
+        font-size: 90%;
+        background-color: #efefef;
+        border: 1px solid #ddd;
+        padding: 1% 1%;
+        margin: 1% 1%;
+        overflow-x: auto; }
+      
+      
+      .code .an {
+        color: #E7BE69; }
+      
+      .code .c {
+        color: #BC9358;
+        font-style: italic; }
+      
+      .code .ch {
+        color: #509E4F; }
+      
+      .code .cl {
+        color: #FFF; }
+      
+      .code .co {
+        color: #FFF; }
+      
+      .code .fl {
+        color: #A4C260; }
+      
+      .code .fu {
+        color: #FFC56D; }
+      
+      .code .gv {
+        color: #D0CFFE; }
+      
+      .code .i {
+        color: #A4C260; }
+      
+      .code .il {
+        background: #151515; }
+      
+      .code .iv {
+        color: #D0CFFE; }
+      
+      .code .pp {
+        color: #E7BE69; }
+      
+      .code .r {
+        color: #CB7832; }
+      
+      .code .rx {
+        color: #A4C260; }
+      
+      .code .s {
+        color: #A4C260; }
+      
+      .code .sy {
+        color: #6C9CBD; }
+      
+      .code .ta {
+        color: #E7BE69; }
+      
+      .code .pc {
+        color: #6C9CBD; }
+    </style>
+  </head>
+  <body>
+    <div id='header'>
+      <h1>gedit-extensions Documentation</h1>
+      <ul>
+        <li>
+          <a href='#Global'>Global</a>
+        </li>
+        <li>
+          <a href='#Python'>Python</a>
+        </li>
+        <li>
+          <a href='#Ruby'>Ruby</a>
+        </li>
+      </ul>
+    </div>
+    <div class='sections'></div>
+    <div class='section'>
+      <a name='Global'>      </a>
+      <h2>Global</h2>
+      <div class='snippet'>
+        <h4>feature - feature</h4>
+        <div class='code'>
+          <pre><span class="co">Feature</span>: <span class="er">$</span>{<span class="i">1</span><span class="sy">:feature_title</span>}&#x000A;        <span class="co">In</span> order to <span class="er">$</span>{<span class="i">2</span><span class="sy">:benefit</span>}&#x000A;        <span class="co">As</span> a <span class="er">$</span>{<span class="i">3</span><span class="sy">:actor</span>}&#x000A;        <span class="co">I</span> need <span class="er">$</span>{<span class="i">4</span><span class="sy">:description</span>}&#x000A;&#x000A;        <span class="co">Scenario</span>: <span class="er">$</span>{<span class="i">5</span><span class="sy">:scenario_title</span>}&#x000A;                <span class="co">Given</span> <span class="er">$</span>{<span class="i">6</span><span class="sy">:assumption</span>}&#x000A;                <span class="co">And</span> <span class="er">$</span>{<span class="i">7</span><span class="sy">:extra_condition</span>}&#x000A;                <span class="co">When</span> <span class="co">I</span> <span class="er">$</span>{<span class="i">8</span><span class="sy">:action</span>}&#x000A;                <span class="co">Then</span> <span class="co">I</span> should <span class="er">$</span>{<span class="i">9</span><span class="sy">:result</span>}</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>scenario - scenario</h4>
+        <div class='code'>
+          <pre><span class="co">Scenario</span>: <span class="er">$</span>{<span class="i">1</span><span class="sy">:scenario_title</span>}&#x000A;        <span class="co">Given</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:assumption</span>}&#x000A;        <span class="co">And</span> <span class="er">$</span>{<span class="i">3</span><span class="sy">:extra_condition</span>}&#x000A;        <span class="co">When</span> <span class="co">I</span> <span class="er">$</span>{<span class="i">4</span><span class="sy">:action</span>}&#x000A;        <span class="co">Then</span> <span class="co">I</span> should <span class="er">$</span>{<span class="i">5</span><span class="sy">:result</span>}</pre>
+        </div>
+      </div>
+    </div>
+    <div class='section'>
+      <a name='Python'>      </a>
+      <h2>Python</h2>
+      <div class='snippet'>
+        <h4>djtaglib - dj-tag-library</h4>
+        <div class='code'>
+          <pre>from django import template&#x000A;&#x000A;register = template.Library()</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>djfilter - dj-filter</h4>
+        <div class='code'>
+          <pre><span class="iv">@register</span>.filter(name=<span class="s"><span class="dl">'</span><span class="k">${1:filter_name}</span><span class="dl">'</span></span>)&#x000A;<span class="r">def</span> <span class="er">$</span>{<span class="i">2</span><span class="sy">:method_name</span>}(value, arg):</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>djtagdef - dj-tag-definition</h4>
+        <div class='code'>
+          <pre><span class="iv">@register</span>.tag(name=<span class="s"><span class="dl">&quot;</span><span class="k">${1:tag_name}</span><span class="dl">&quot;</span></span>)&#x000A;<span class="r">def</span> <span class="fu">do_</span><span class="er">$</span>{<span class="i">1</span><span class="sy">:tag_name</span>}(parser, token):</pre>
+        </div>
+      </div>
+    </div>
+    <div class='section'>
+      <a name='Ruby'>      </a>
+      <h2>Ruby</h2>
+      <div class='snippet'>
+        <h4>habtm - has and belongs to many</h4>
+        <div class='code'>
+          <pre>has_and_belongs_to_many :<span class="er">$</span>{<span class="i">1</span><span class="sy">:entity</span>}</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>it - it</h4>
+        <div class='code'>
+          <pre>it <span class="s"><span class="dl">&quot;</span><span class="k">should ${1:condition}</span><span class="dl">&quot;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>shebang - shebang</h4>
+        <div class='code'>
+          <pre><span class="c">#!/usr/bin/env ruby</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>absrequire - absrequire</h4>
+        <div class='code'>
+          <pre>require(<span class="co">File</span>.join(<span class="co">File</span>.dirname(<span class="pc">__FILE__</span>), <span class="s"><span class="dl">&quot;</span><span class="k">${1:file_name}</span><span class="dl">&quot;</span></span>)</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>habtm - habtm</h4>
+        <div class='code'>
+          <pre>has_and_belongs_to_many :<span class="er">$</span>{<span class="i">1</span><span class="sy">:name</span>}</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>habtmthru - habtm thru</h4>
+        <div class='code'>
+          <pre>has_and_belongs_to_many :<span class="er">$</span>{<span class="i">1</span><span class="sy">:name</span>}, <span class="sy">:through</span> =&gt; :<span class="er">$</span>{<span class="i">2</span><span class="sy">:association</span>}</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>unique - unique</h4>
+        <div class='code'>
+          <pre><span class="sy">:unique</span> =&gt; <span class="pc">true</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>belongsto - belongs_to</h4>
+        <div class='code'>
+          <pre>belongs_to :<span class="er">$</span>{<span class="i">1</span><span class="sy">:name</span>}</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>hasone - hasone</h4>
+        <div class='code'>
+          <pre>has_one :<span class="er">$</span>{<span class="i">1</span><span class="sy">:name</span>}</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>createtable - create_table</h4>
+        <div class='code'>
+          <pre>create_table :<span class="er">$</span>{<span class="i">1</span><span class="sy">:table_name</span>} <span class="r">do</span> |t|&#x000A;        <span class="er">$</span>{<span class="i">0</span>}&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>column - column</h4>
+        <div class='code'>
+          <pre>column(:<span class="er">$</span>{<span class="i">1</span><span class="sy">:name</span>}, :<span class="er">$</span>{<span class="i">2</span><span class="sy">:type</span>}<span class="er">$</span>{<span class="i">0</span>})</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>limit - limit</h4>
+        <div class='code'>
+          <pre><span class="sy">:limit</span> =&gt; <span class="er">$</span>{<span class="i">1</span><span class="sy">:limit</span>}</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>addindex - addindex</h4>
+        <div class='code'>
+          <pre>add_index(:<span class="er">$</span>{<span class="i">1</span><span class="sy">:table</span>}, :<span class="er">$</span>{<span class="i">2</span><span class="sy">:column</span>}<span class="er">$</span>{<span class="i">0</span>})</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>changecolumn - changecolumn</h4>
+        <div class='code'>
+          <pre>change_column(:<span class="er">$</span>{<span class="i">1</span><span class="sy">:table</span>}, :<span class="er">$</span>{<span class="i">2</span><span class="sy">:column</span>}, <span class="er">$</span>{<span class="i">0</span>})</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>droptable - droptable</h4>
+        <div class='code'>
+          <pre>drop_table(:<span class="er">$</span>{<span class="i">1</span><span class="sy">:name</span>})</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>removecolumn - removecolumn</h4>
+        <div class='code'>
+          <pre>remove_column(:<span class="er">$</span>{<span class="i">1</span><span class="sy">:name</span>}, :<span class="er">$</span>{<span class="i">2</span><span class="sy">:column</span>})</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>irreversible - irreversible</h4>
+        <div class='code'>
+          <pre>raise <span class="co">ActiveRecord</span>::<span class="co">IrreversibleMigration</span>, <span class="s"><span class="dl">&quot;</span><span class="k">${1:reason}</span><span class="dl">&quot;</span></span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>resource - resource</h4>
+        <div class='code'>
+          <pre><span class="r">class</span> <span class="er">$</span>{<span class="i">1</span><span class="sy">:ResourceName</span>}<span class="co">Resource</span> &lt; <span class="co">ActiveResource</span>::<span class="co">Base</span>&#x000A;        <span class="pc">self</span>.site = <span class="s"><span class="dl">&quot;</span><span class="k">http://${2:host}:${3:port}/</span><span class="dl">&quot;</span></span>&#x000A;        <span class="pc">self</span>.element_name = <span class="s"><span class="dl">&quot;</span><span class="k">${4:name}</span><span class="dl">&quot;</span></span>&#x000A;        <span class="pc">self</span>.prefix = <span class="s"><span class="dl">&quot;</span><span class="k">${5:prefix}</span><span class="dl">&quot;</span></span>&#x000A;        <span class="pc">self</span>.user = <span class="s"><span class="dl">&quot;</span><span class="k">${6:username}</span><span class="dl">&quot;</span></span>&#x000A;        <span class="pc">self</span>.password = <span class="s"><span class="dl">&quot;</span><span class="k">${7:password}</span><span class="dl">&quot;</span></span>&#x000A;        <span class="pc">self</span>.timeout = <span class="er">$</span>{<span class="i">8</span><span class="sy">:timeout</span>}&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>describe - describe</h4>
+        <div class='code'>
+          <pre>describe <span class="er">$</span>{<span class="i">1</span><span class="sy">:module_or_class</span>} <span class="r">do</span>&#x000A;  before(<span class="sy">:each</span>) <span class="r">do</span>&#x000A;    <span class="er">$</span>{<span class="i">2</span><span class="sy">:before</span>}&#x000A;  <span class="r">end</span>&#x000A;&#x000A;        <span class="er">$</span>{<span class="i">0</span>}&#x000A;&#x000A;        after(<span class="sy">:each</span>) <span class="r">do</span>&#x000A;                <span class="er">$</span>{<span class="i">3</span><span class="sy">:after</span>}&#x000A;        <span class="r">end</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>pending - pending</h4>
+        <div class='code'>
+          <pre>pending(<span class="s"><span class="dl">&quot;</span><span class="k">${1:message}</span><span class="dl">&quot;</span></span>) <span class="r">do</span>&#x000A;        <span class="er">$</span>{<span class="i">0</span>}&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specmodelerror - specmodelerror</h4>
+        <div class='code'>
+          <pre>it <span class="s"><span class="dl">&quot;</span><span class="k">should have an error on ${1:attribute}</span><span class="dl">&quot;</span></span> <span class="r">do</span>&#x000A;  <span class="er">@</span><span class="er">$</span>{<span class="i">2</span><span class="sy">:model</span>}.should have(<span class="er">$</span>{<span class="i">3</span><span class="sy">:count</span>}).errors_on(:<span class="er">$</span>{<span class="i">1</span><span class="sy">:attribute</span>})&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specmodelrecords - specmodelrecords</h4>
+        <div class='code'>
+          <pre>it <span class="s"><span class="dl">&quot;</span><span class="k">should have ${1:count} records</span><span class="dl">&quot;</span></span> <span class="r">do</span>&#x000A;  <span class="er">@</span><span class="er">$</span>{<span class="i">2</span><span class="sy">:model</span>}.should have(<span class="er">$</span>{<span class="i">1</span><span class="sy">:count</span>}).record<span class="er">$</span>{<span class="i">0</span>}&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>describecontroller - describecontroller</h4>
+        <div class='code'>
+          <pre>describe <span class="er">$</span>{<span class="i">1</span><span class="sy">:ControllerName</span>}<span class="co">Controller</span> <span class="r">do</span>&#x000A;  integrate_views&#x000A;  &#x000A;  <span class="er">$</span>{<span class="i">0</span>}&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>isolatemodel - isolatemodel</h4>
+        <div class='code'>
+          <pre><span class="iv">@id</span> = <span class="i">6543</span>&#x000A;<span class="er">@</span><span class="er">$</span>{<span class="i">1</span><span class="sy">:instance_name</span>} = mock_model(<span class="er">$</span>{<span class="i">2</span><span class="sy">:ModelClass</span>})&#x000A;<span class="er">$</span>{<span class="i">2</span><span class="sy">:ModelClass</span>}.should_receive(<span class="sy">:find</span>).with(<span class="iv">@id</span>).and_return(<span class="er">@</span><span class="er">$</span>{<span class="i">1</span><span class="sy">:instance_name</span>})</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>spectemplaterendered - spectemplaterendered</h4>
+        <div class='code'>
+          <pre>it <span class="s"><span class="dl">&quot;</span><span class="k">should render '${1:template_path}' on ${2:http_method} '${3:request_path}'</span><span class="dl">&quot;</span></span> <span class="r">do</span>&#x000A;        <span class="er">$</span>{<span class="i">2</span><span class="sy">:http_method</span>}(<span class="s"><span class="dl">'</span><span class="k">${3:request_path}</span><span class="dl">'</span></span>)&#x000A;        response.should(render_template(<span class="s"><span class="dl">&quot;</span><span class="k">${1:template_path}</span><span class="dl">&quot;</span></span>))&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specresponsetext - specresponsetext</h4>
+        <div class='code'>
+          <pre>it <span class="s"><span class="dl">&quot;</span><span class="k">should return text '${1:expected_text}' in response to ${2:http_method} on '${3:request_path}'</span><span class="dl">&quot;</span></span> <span class="r">do</span>&#x000A;        <span class="er">$</span>{<span class="i">2</span><span class="sy">:http_method</span>}(<span class="s"><span class="dl">'</span><span class="k">${3:request_path}</span><span class="dl">'</span></span>)&#x000A;        response.should have_text(<span class="s"><span class="dl">&quot;</span><span class="k">${1:expected_text}</span><span class="dl">&quot;</span></span>)&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specresponseredirect - specresponseredirect</h4>
+        <div class='code'>
+          <pre>it <span class="s"><span class="dl">&quot;</span><span class="k">should redirect to action '${1:action}' on ${2:http_method} '${3:request_path}'</span><span class="dl">&quot;</span></span> <span class="r">do</span>&#x000A;        <span class="er">$</span>{<span class="i">2</span><span class="sy">:http_method</span>}(<span class="s"><span class="dl">'</span><span class="k">${3:request_path}</span><span class="dl">'</span></span>)&#x000A;        response.should redirect_to(<span class="sy">:action</span> =&gt; <span class="s"><span class="dl">'</span><span class="k">${1:action}</span><span class="dl">'</span></span>)&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specroutefor - specroutefor</h4>
+        <div class='code'>
+          <pre>it <span class="s"><span class="dl">&quot;</span><span class="k">should map </span><span class="dl">#</span><span class="er">$</span><span class="k">{1:action} to '${2:path}'</span><span class="dl">&quot;</span></span> <span class="r">do</span>&#x000A;        route_for(<span class="sy">:controller</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">${3:controller}</span><span class="dl">&quot;</span></span>, <span class="sy">:action</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">${1:action}</span><span class="dl">&quot;</span></span>).should == <span class="s"><span class="dl">&quot;</span><span class="k">${2:path}</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specparamsfrom - specparamsfrom</h4>
+        <div class='code'>
+          <pre>it <span class="s"><span class="dl">&quot;</span><span class="k">should generate params for </span><span class="dl">#</span><span class="er">$</span><span class="k">{1:action}</span><span class="dl">&quot;</span></span> <span class="r">do</span>&#x000A;        params_from(:<span class="er">$</span>{<span class="i">2</span><span class="sy">:http_method</span>}, <span class="s"><span class="dl">&quot;</span><span class="k">${3:path}</span><span class="dl">&quot;</span></span>).should == {<span class="sy">:controller</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">${4:controller}</span><span class="dl">&quot;</span></span>, <span class="sy">:action</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">${1:action}</span><span class="dl">&quot;</span></span>, <span class="sy">:id</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">${5:id}</span><span class="dl">&quot;</span></span>}&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>spectagexists - spectagexists</h4>
+        <div class='code'>
+          <pre>response.should have_tag(<span class="s"><span class="dl">'</span><span class="k">${1:tag}.${2:class}#${3:dom_id}</span><span class="dl">'</span></span>)</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specnestedtagexists - specnestedtagexists</h4>
+        <div class='code'>
+          <pre>response.should have_tag(<span class="s"><span class="dl">'</span><span class="k">${1:parent_tag}</span><span class="dl">'</span></span>) <span class="r">do</span>&#x000A;  with_tag(<span class="s"><span class="dl">'</span><span class="k">${2:child_tag}</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">${3:content}</span><span class="dl">'</span></span>)&#x000A;  <span class="er">$</span>{<span class="i">0</span>}&#x000A;<span class="r">end</span></pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specchildtagexists - specchildtagexists</h4>
+        <div class='code'>
+          <pre>with_tag(<span class="s"><span class="dl">'</span><span class="k">${1:tag}</span><span class="dl">'</span></span>, <span class="s"><span class="dl">'</span><span class="k">${2:content}</span><span class="dl">'</span></span>)</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specblocktagexists - specblocktagexists</h4>
+        <div class='code'>
+          <pre>response[:<span class="er">$</span>{<span class="i">1</span><span class="sy">:block_name</span>}].should have_tag(<span class="s"><span class="dl">'</span><span class="k">${2:tag}</span><span class="dl">'</span></span>)</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>mockviewhelper - mockviewhelper</h4>
+        <div class='code'>
+          <pre>template.should_receive(:<span class="er">$</span>{<span class="i">1</span><span class="sy">:helper_method</span>}).and_return(mock(<span class="er">$</span>{<span class="i">2</span><span class="sy">:class</span>}))</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specsuccess - specsuccess</h4>
+        <div class='code'>
+          <pre>response.should be_success</pre>
+        </div>
+      </div>
+      <div class='snippet'>
+        <h4>specredirect - specredirect</h4>
+        <div class='code'>
+          <pre>response.should be_redirect</pre>
+        </div>
+      </div>
+    </div>
+    <div id='footer'>
+      <p><a href='http://github.com/finsignia/gedit-extensions'<code>gedit-extensions</code></a> by <a href='http://susanpotter.net/'>Susan Potter</a>, converted to cheatsheet using the documentation code from <a href='http://github.com/colszowka/gedit-snippets'><code>gedit-snippets</code></a>, which is Copyright (C) 2009 Christoph Olszowka, used under the MIT licence.</p>
+      <p>This documentation generated on 17 January 2009 at 18:54 GMT</p>
+    </div>
+  </body>
+</html>

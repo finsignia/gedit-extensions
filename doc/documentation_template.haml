@@ -1,0 +1,35 @@
+%html
+  %head
+    %title gedit-extensions Documentation
+    %style{:type => 'text/css', :media => 'screen'}= css_screen
+    %style{:type => 'text/css', :media => 'print'}= css_print
+
+  %body
+    #header
+      %h1 gedit-extensions Documentation
+      %ul
+        - snippets.sort.each do |data|
+          - section = data[0]
+          - snips = data[1]
+          %li
+            %a{:href => "\##{section}"}= section
+
+    .sections
+    - snippets.sort.each do |data|
+      - section = data[0]
+      - snips = data[1]
+      .section
+        %a{:name => section}
+        %h2= section
+        - snips.each do |snip|
+          .snippet
+            %h4= snip.tag + " - " + snip.description
+            .code
+              - if snip.text =~ /<%/ or snip.text =~ /<[\w]+>/i
+                %pre= CodeRay.scan(snip.text, :rhtml).div(:wrap => nil, :css => :class)
+              - else
+                %pre= CodeRay.scan(snip.text, :ruby).div(:wrap => nil, :css => :class)
+
+    #footer
+      %p= "<a href='http://github.com/finsignia/gedit-extensions'<code>gedit-extensions</code></a> by <a href='http://susanpotter.net/'>Susan Potter</a>, converted to cheatsheet using the documentation code from <a href='http://github.com/colszowka/gedit-snippets'><code>gedit-snippets</code></a>, which is Copyright (C) " + Time.now.year.to_s + " Christoph Olszowka, used under the MIT licence."
+      %p= "This documentation generated on " + Time.now.strftime("%d %B %Y at %H:%M %Z")
