@@ -14,6 +14,6 @@ N/A
 
 ## Installation
 
-Download GitHib archive and uncompress in your ${HOME}/gnome2/gedit/ directory.
+Download GitHub archive and uncompress in your ${HOME}/.gnome2/gedit/ directory.
 
 
