@@ -10,10 +10,16 @@
 
 ## Contributors
 
-N/A
+[Christoph Olszowka](http://github.com/colszowka/gedit-snippets) for the documentation generator that creates the cheatsheet.
 
 ## Installation
 
 Download GitHub archive and uncompress in your ${HOME}/.gnome2/gedit/ directory.
 
+## Documentation
 
+If you want to create a new cheatsheet, go into the doc directory and
+
+  ruby -rubygems create_documentation.rb
+  
+You will need the following gems: xml-simple, haml, sass, coderay.
