@@ -20,6 +20,6 @@ Download GitHub archive and uncompress in your ${HOME}/.gnome2/gedit/ directory.
 
 If you want to create a new cheatsheet, go into the doc directory and
 
-`@ruby -rubygems create_documentation.rb`
+`ruby -rubygems create_documentation.rb`
   
-You will need the following gems: `xml-simple`, `haml`, `sass` and `coderay`.
+You will need the following gems: xml-simple, haml, sass, coderay.
